@@ -20,23 +20,21 @@ Example Playbook
 - hosts: servers
   roles:
     - role: olegstepura.l10n
-      timezone: Europe/Kaliningrad
-      locales:
-        - en_US.UTF-8
-        - ru_RU.UTF-8
-      locale: en_US.UTF-8
-      console:
-        charmap: UTF-8
-        codeset: guess
-        fontface: guess
-        fontsize: 8x16
-      keyboard:
-        backspace: guess
-        options: "grp:alt_shift_toggle,grp_led:scroll"
-        model: pc104
-        layout: "us,ru"
-        variant: ","
-
+      vars:
+        l10n_timezone: Europe/Kaliningrad
+        l10n_locale_lang: en_US.UTF-8
+        l10n_locales:
+          - en_US.UTF-8
+          - ru_RU.UTF-8
+        l10n_console_charmap: UTF-8
+        l10n_console_codeset: guess
+        l10n_console_fontface: guess
+        l10n_console_fontsize: 8x16
+        l10n_keyboard_backspace: guess
+        l10n_keyboard_options: "grp:alt_shift_toggle,grp_led:scroll"
+        l10n_keyboard_model: pc104
+        l10n_keyboard_layout: "us,ru"
+        l10n_keyboard_variant: ","
 ```
 
 License
