@@ -1,0 +1,36 @@
+---
+# defaults file for l10n
+
+l10n_locale_lang: en_US.UTF-8
+
+l10n_timezone: Etc/UTC
+l10n_locales: ['{{ l10n_locale_lang }}']
+
+l10n_locale_language: '{{ l10n_locale_lang }}'
+l10n_locale_lc_address: '{{ l10n_locale_lang }}'
+l10n_locale_lc_all: '{{ l10n_locale_lang }}'
+l10n_locale_lc_collate: '{{ l10n_locale_lang }}'
+l10n_locale_lc_ctype: '{{ l10n_locale_lang }}'
+l10n_locale_lc_identification: '{{ l10n_locale_lang }}'
+l10n_locale_lc_measurement: '{{ l10n_locale_lang }}'
+l10n_locale_lc_messages: '{{ l10n_locale_lang }}'
+l10n_locale_lc_monetary: '{{ l10n_locale_lang }}'
+l10n_locale_lc_name: '{{ l10n_locale_lang }}'
+l10n_locale_lc_numeric: '{{ l10n_locale_lang }}'
+l10n_locale_lc_paper: '{{ l10n_locale_lang }}'
+l10n_locale_lc_response: '{{ l10n_locale_lang }}'
+l10n_locale_lc_telephone: '{{ l10n_locale_lang }}'
+l10n_locale_lc_time: '{{ l10n_locale_lang }}'
+
+l10n_console_active_consoles: '/dev/tty[1-6]'
+l10n_console_charmap: UTF-8
+l10n_console_codeset: guess
+l10n_console_fontface: guess
+l10n_console_fontsize: 8x16
+l10n_console_videomode: ''
+
+l10n_keyboard_backspace: guess
+l10n_keyboard_options: 'grp:alt_shift_toggle,grp_led:scroll'
+l10n_keyboard_model: pc104
+l10n_keyboard_layout: 'us'
+l10n_keyboard_variant: ','

@@ -1,0 +1,14 @@
+{{ ansible_managed | comment }}
+# KEYBOARD CONFIGURATION FILE
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="{{ l10n_keyboard_model }}"
+XKBLAYOUT="{{ l10n_keyboard_layout }}"
+XKBVARIANT="{{ l10n_keyboard_variant }}"
+XKBOPTIONS="{{ l10n_keyboard_options }}"
+
+BACKSPACE="{{ l10n_keyboard_backspace }}"
+
+{% if l10n_keyboard_kmap is defined %}
+KMAP="{{ l10n_keyboard_kmap }}"
+{% endif %}

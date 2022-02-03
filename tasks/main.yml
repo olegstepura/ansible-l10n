@@ -1,0 +1,43 @@
+---
+- name: Set timezone
+  community.general.timezone:
+    name: "{{ l10n_timezone }}"
+
+- name: Configure locales
+  community.general.locale_gen:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ l10n_locales }}"
+
+- name: Configure locale
+  ansible.builtin.template:
+    src: locale.j2
+    dest: /etc/default/locale
+    force: yes
+    owner: root
+    group: root
+    mode: 'u=rw,go=r'
+  notify:
+    - dpkg-reconfigure locales
+
+- name: Configure console
+  ansible.builtin.template:
+    src: console-setup.j2
+    dest: /etc/default/console-setup
+    force: yes
+    owner: root
+    group: root
+    mode: 'u=rw,go=r'
+  notify:
+    - dpkg-reconfigure console-setup
+
+- name: Configure keyboard
+  ansible.builtin.template:
+    src: keyboard.j2
+    dest: /etc/default/keyboard
+    force: yes
+    owner: root
+    group: root
+    mode: 'u=rw,go=r'
+  notify:
+    - dpkg-reconfigure keyboard-configuration

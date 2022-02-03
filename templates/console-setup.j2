@@ -1,0 +1,37 @@
+{{ ansible_managed | comment }}
+# CONFIGURATION FILE FOR SETUPCON
+# Consult the console-setup(5) manual page.
+
+ACTIVE_CONSOLES="{{ l10n_console_active_consoles }}"
+
+CHARMAP="{{ l10n_console_charmap }}"
+
+CODESET="{{ l10n_console_codeset }}"
+FONTFACE="{{ l10n_console_fontface }}"
+FONTSIZE="{{ l10n_console_fontsize }}"
+
+VIDEOMODE="{{ l10n_console_videomode }}"
+
+{% if l10n_console_font is defined %}
+FONT="{{ l10n_console_font }}"
+{% endif -%}
+
+{% if l10n_console_font_map is defined %}
+FONT_MAP="{{ l10n_console_font_map }}"
+{% endif -%}
+
+{% if l10n_console_console_map is defined %}
+CONSOLE_MAP="{{ l10n_console_console_map }}"
+{% endif -%}
+
+{% if l10n_console_screen_width is defined %}
+SCREEN_WIDTH="{{ l10n_console_screen_width }}"
+{% endif -%}
+
+{% if l10n_console_screen_height is defined %}
+SCREEN_HEIGHT="{{ l10n_console_screen_height }}"
+{% endif -%}
+
+{% if l10n_console_beep is defined %}
+BEEP="{{ l10n_console_beep }}"
+{% endif -%}

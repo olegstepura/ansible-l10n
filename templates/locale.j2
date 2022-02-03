@@ -1,0 +1,65 @@
+{{ ansible_managed | comment }}
+# LOCALE CONFIGURATION FILE
+# Consult the locale(1) manual page.
+
+LANG={{ l10n_locale_lang }}
+
+{% if l10n_locale_lang != l10n_locale_language %}
+LANGUAGE={{ l10n_locale_language }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_address %}
+LC_ADDRESS={{ l10n_locale_lc_address }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_all %}
+LC_ALL={{ l10n_locale_lc_all }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_collate %}
+LC_COLLATE={{ l10n_locale_lc_collate }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_ctype %}
+LC_CTYPE={{ l10n_locale_lc_ctype }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_identification %}
+LC_IDENTIFICATION={{ l10n_locale_lc_identification }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_measurement %}
+LC_MEASUREMENT={{ l10n_locale_lc_measurement }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_messages %}
+LC_MESSAGES={{ l10n_locale_lc_messages }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_monetary %}
+LC_MONETARY={{ l10n_locale_lc_monetary }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_name %}
+LC_NAME={{ l10n_locale_lc_name }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_numeric %}
+LC_NUMERIC={{ l10n_locale_lc_numeric }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_paper %}
+LC_PAPER={{ l10n_locale_lc_paper }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_response %}
+LC_RESPONSE={{ l10n_locale_lc_response }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_telephone %}
+LC_TELEPHONE={{ l10n_locale_lc_telephone }}
+{% endif -%}
+
+{% if l10n_locale_lang != l10n_locale_lc_time %}
+LC_TIME={{ l10n_locale_lc_time }}
+{% endif -%}
