@@ -1,7 +1,6 @@
 {{ ansible_managed | comment }}
 # LOCALE CONFIGURATION FILE
 # Consult the locale(1) manual page.
-
 LANG={{ l10n_locale_lang }}
 
 {% if l10n_locale_lang != l10n_locale_language %}
