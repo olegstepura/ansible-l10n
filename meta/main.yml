@@ -2,6 +2,7 @@ galaxy_info:
   author: Oleg Stepura
   description: Configure localisation on debian-based distributions
   role_name: l10n
+  namespace: olegstepura
 
   license: MIT
 
@@ -21,7 +22,6 @@ galaxy_info:
     - localisation
     - l10n
     - console
-    - console-setup
     - keyboard
 
 dependencies: []
